@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<LanguageData>
+  <StartGame text="Start Game"/>
+  <Options text="Options"/>
+  <Quit text="Quit"/>
+
+  <Return text="Return"/>
+
+  <Language text="Language:"/>
+  <English text ="English"/>
+  <Portuguese text ="Portuguese"/>
+</LanguageData>
