@@ -6,7 +6,7 @@ public class ObjectPool : MonoBehaviour {
     public GameObject objectPrefab;
     public int objectCount;
 
-    GameObject[] objectsList;
+    protected GameObject[] objectsList;
 
     void OnEnable()
     {
@@ -30,5 +30,29 @@ public class ObjectPool : MonoBehaviour {
             }
         }
         return null;
+    }
+
+    public GameObject GetRandomActiveObject()
+    {
+
+        int[] index_inactive_list;
+        int j = 0;
+        index_inactive_list = new int[objectCount];
+
+        for (int i =0; i < objectCount; ++i)
+        {
+            if(objectsList[i].activeSelf == false)
+            {
+                index_inactive_list[j++] = i;
+            }
+        }
+
+        if(j == 0)
+            return null;
+
+        int lottery = Random.Range(0, j);
+
+        objectsList[lottery].SetActive(true);
+        return objectsList[lottery];
     }
 }
