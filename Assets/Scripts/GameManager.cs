@@ -9,6 +9,12 @@ public enum Language
     English
 }
 
+public enum GameMode
+{
+    RIGHT_HANDED,
+    LEFT_HANDED
+}
+
 public class GameManager : MonoBehaviour {
     public static GameManager instance;
 
@@ -17,6 +23,8 @@ public class GameManager : MonoBehaviour {
 
     public List<TranslatableObject> translatableObjectsList = new List<TranslatableObject>();
 
+    public GameMode currentGameMode = GameMode.RIGHT_HANDED;
+
     void OnEnable()
     {
         if (instance != null)
@@ -24,6 +32,11 @@ public class GameManager : MonoBehaviour {
             Destroy(gameObject);
             return;
         }
+
+        if(PlayerPrefs.GetString("Language") != "")
+            currentLanguage = PlayerPrefs.GetString("Language");
+
+        currentGameMode = (GameMode)PlayerPrefs.GetInt("GameMode");
 
         instance = this;
 
@@ -50,6 +63,8 @@ public class GameManager : MonoBehaviour {
         {
             currentLanguage = "Portuguese";
         }
+
+        PlayerPrefs.SetString("Language", currentLanguage);
 
         LoadLanguageDocument();
 

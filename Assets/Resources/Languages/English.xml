@@ -8,6 +8,9 @@
 
   <Return text="Return"/>
 
+  <GameMode text="Game Mode:"/>
+  <RightHanded text="Right Handed"/>
+  <LeftHanded text="Left Handed"/>
   <Language text="Language:"/>
   <CurrentLanguage text="English"/>
 </LanguageData>

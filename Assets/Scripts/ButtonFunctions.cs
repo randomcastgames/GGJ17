@@ -1,7 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class LanguageButton : MonoBehaviour {
+public class ButtonFunctions : MonoBehaviour {
+
+    public void PlayGame(string sceneName)
+    {
+        SceneManager.LoadScene(sceneName);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
+
     public void ChangeLanguage()
     {
         if (GameManager.instance.currentLanguage == "English")

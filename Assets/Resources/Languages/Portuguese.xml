@@ -8,6 +8,9 @@
 
   <Return text="Retornar"/>
 
+  <GameMode text="Mode de Jogo:"/>
+  <RightHanded text="Destro"/>
+  <LeftHanded text="Canhoto"/>
   <Language text="Idioma:"/>
   <CurrentLanguage text="Português"/>
 </LanguageData>
