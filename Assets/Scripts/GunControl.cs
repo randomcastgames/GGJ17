@@ -17,5 +17,14 @@ public class GunControl : MonoBehaviour {
         float AngleDeg = (180 / Mathf.PI) * AngleRad;
         // Rotate Object
         transform.rotation = Quaternion.Euler(0, 0, AngleDeg);
+
+        if (AngleDeg > 90.0f)
+        {
+            mySpriteRenderer.flipY = true;
+        }
+        else
+        {
+            mySpriteRenderer.flipY = false;
+        }
     }
 }
