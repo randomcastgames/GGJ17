@@ -8,9 +8,10 @@
 
   <Return text="Retornar"/>
 
-  <GameMode text="Mode de Jogo:"/>
-  <RightHanded text="Destro"/>
-  <LeftHanded text="Canhoto"/>
   <Language text="Idioma:"/>
   <CurrentLanguage text="Português"/>
+
+  <PlayAgain text="Jogar Novamente"/>
+  <MainMenu text="Menu Principal"/>
+  <YouDied text="Você morreu!"/>
 </LanguageData>

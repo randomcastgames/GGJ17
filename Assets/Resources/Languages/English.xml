@@ -7,10 +7,11 @@
   <Quit text="Quit"/>
 
   <Return text="Return"/>
-
-  <GameMode text="Game Mode:"/>
-  <RightHanded text="Right Handed"/>
-  <LeftHanded text="Left Handed"/>
+  
   <Language text="Language:"/>
   <CurrentLanguage text="English"/>
+  
+  <PlayAgain text="Play Again"/>
+  <MainMenu text="Main Menu"/>
+  <YouDied text="You Died!"/>
 </LanguageData>

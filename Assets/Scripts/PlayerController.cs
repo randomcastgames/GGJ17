@@ -1,22 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour {
 
     public float speed;
     public float jumpPower;
 
-    Vector3 myPosition;
-    Vector3 myMovement;
-
     Rigidbody2D myRigidyBody;
+
+    SpriteRenderer mySpriteRenderer;
 
     private bool grounded = true;
 
     // Use this for initialization
     void OnEnable () {
         myRigidyBody = GetComponent<Rigidbody2D>();
+        mySpriteRenderer = GetComponent<SpriteRenderer>();
 
     }
 	
@@ -28,6 +29,11 @@ public class PlayerController : MonoBehaviour {
         }
 
         GetMovementInput();
+
+        if(!mySpriteRenderer.isVisible)
+        {
+            //Die();
+        }
     }
 
     void GetMovementInput()
@@ -47,5 +53,10 @@ public class PlayerController : MonoBehaviour {
             myRigidyBody.AddForce(new Vector2(0, jumpPower), ForceMode2D.Impulse);
             grounded = false;
         }
+    }
+
+    void Die()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
