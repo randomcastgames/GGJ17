@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class CurrentModeControl : TranslatableObject {
-
+/*
     void OnEnable()
     {
         if (GameManager.instance.currentGameMode == GameMode.RIGHT_HANDED)
@@ -31,4 +31,5 @@ public class CurrentModeControl : TranslatableObject {
 
         PlayerPrefs.SetInt("GameMode", (int)GameManager.instance.currentGameMode);
     }
+    */
 }
