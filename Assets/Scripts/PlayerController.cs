@@ -23,10 +23,10 @@ public class PlayerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if(!grounded && myRigidyBody.velocity.y == 0)
+        /*if(!grounded && myRigidyBody.velocity.y == 0)
         {
             grounded = true;
-        }
+        }*/
 
         GetMovementInput();
 
@@ -58,5 +58,14 @@ public class PlayerController : MonoBehaviour {
     void Die()
     {
         SceneManager.LoadScene("GameOver");
+    }
+
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.tag == "ground")
+        {
+            this.grounded = true;
+        }
     }
 }
