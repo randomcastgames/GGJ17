@@ -9,11 +9,12 @@ public class ExplosionForce2D : MonoBehaviour
 {
 	public float Power;
 	public float Radius;
+    public GameObject explosion;
 	
 		// Use this for initialization
 		void Start ()
 		{
-	
+	        
 		}
 	
 		// Update is called once per frame
@@ -24,11 +25,16 @@ public class ExplosionForce2D : MonoBehaviour
 		if (Input.touchCount > 0 && Input.GetTouch (0).phase == TouchPhase.Began) {
 			Vector3 fingerPos = Input.GetTouch(0).position;
 			fingerPos.z = 10;
+
+
             RaycastHit2D hit = Physics2D.Raycast(GetComponent<Rigidbody2D>().transform.position, Camera.main.ScreenToWorldPoint(fingerPos));
 
             if (hit)
             {
                 AddExplosionForce(GetComponent<Rigidbody2D>(), Power * 100, hit.point, Radius);
+
+                GameObject exp = Instantiate(explosion);
+                exp.transform.position = hit.point;
             }
         }
 
@@ -45,6 +51,8 @@ public class ExplosionForce2D : MonoBehaviour
             
             if (hit){
                 AddExplosionForce(GetComponent<Rigidbody2D>(), Power * 100, hit.point, Radius);
+                GameObject exp = Instantiate(explosion);
+                exp.transform.position = hit.point;
             }
         }
 # endif	
