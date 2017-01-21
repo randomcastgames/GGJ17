@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class TranslatableObject : MonoBehaviour
 {
     public string term;
-    public bool upper = true;
+    public bool upper = false;
 
     public void Start()
     {
