@@ -12,14 +12,14 @@ PlayerSettings:
   accelerometerFrequency: 60
   companyName: RandomCastGames
   productName: GGJ17
-  defaultCursor: {fileID: 0}
+  defaultCursor: {fileID: 2800000, guid: b588a639c1f3e3449a1378482a174405, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
   m_ShowUnitySplashScreen: 1
   m_ShowUnitySplashLogo: 1
   m_SplashScreenOverlayOpacity: 1
   m_SplashScreenAnimation: 1
-  m_SplashScreenLogoStyle: 1
+  m_SplashScreenLogoStyle: 0
   m_SplashScreenDrawMode: 1
   m_SplashScreenBackgroundAnimationZoom: 1
   m_SplashScreenLogoAnimationZoom: 1
@@ -40,6 +40,10 @@ PlayerSettings:
   m_SplashScreenLogos:
   - logo: {fileID: 10404, guid: 0000000000000000e000000000000000, type: 0}
     duration: 2
+  - logo: {fileID: 21300000, guid: 0ce9f79c0b6797442abab25fcab26bca, type: 3}
+    duration: 2
+  - logo: {fileID: 21300000, guid: 4502a26369891cc4d860a0856abf1cc2, type: 3}
+    duration: 3
   m_SplashScreenBackgroundLandscape: {fileID: 0}
   m_SplashScreenBackgroundPortrait: {fileID: 0}
   m_VirtualRealitySplashScreen: {fileID: 0}
@@ -211,7 +215,7 @@ PlayerSettings:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 0}
+      m_Icon: {fileID: 2800000, guid: b588a639c1f3e3449a1378482a174405, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []
