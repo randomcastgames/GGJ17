@@ -21,7 +21,8 @@ public class MoveObject : MonoBehaviour {
     {
         if (PauseManager.instance.paused) return;
 
-        StartCoroutine("DisableAfter");
+        if(transform.position.y < -4.0f)
+            StartCoroutine("DisableAfter");
     }
 
     IEnumerator DisableAfter ()

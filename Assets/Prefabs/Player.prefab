@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114256337113804418}
   - component: {fileID: 114838497323999294}
   - component: {fileID: 114022238194525312}
+  - component: {fileID: 58405012215946514}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -274,6 +275,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58405012215946514
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1141294332477530}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -0.3}
+  serializedVersion: 2
+  m_Radius: 0.34356844
 --- !u!61 &61650111572128844
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -285,9 +300,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.0174122, y: -0.016785383}
+  m_Offset: {x: 0.017412186, y: 0.11830166}
   serializedVersion: 2
-  m_Size: {x: 0.69545245, y: 1.1965379}
+  m_Size: {x: 0.69545245, y: 0.92636395}
 --- !u!114 &114022238194525312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -300,6 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 0, y: -0.02, z: 0}
+  timeToDisable: 1
 --- !u!114 &114033524217972510
 MonoBehaviour:
   m_ObjectHideFlags: 1
