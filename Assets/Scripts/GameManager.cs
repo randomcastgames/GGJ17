@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour {
 
     public List<TranslatableObject> translatableObjectsList = new List<TranslatableObject>();
 
+    public Vector3 worldSpeed;
+
     void OnEnable()
     {
         if (instance != null)

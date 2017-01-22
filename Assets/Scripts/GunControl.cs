@@ -9,8 +9,11 @@ public class GunControl : MonoBehaviour {
     {
         mySpriteRenderer = GetComponent<SpriteRenderer>();
     }
+
     void Update()
     {
+        if (Time.timeScale == 0) return;
+
         // Get Angle in Radians
         float AngleRad = Mathf.Atan2(Camera.main.ScreenToWorldPoint(Input.mousePosition).y - transform.position.y, Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x);
         // Get Angle in Degrees

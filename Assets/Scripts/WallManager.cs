@@ -7,6 +7,8 @@ public class WallManager : MonoBehaviour {
     public float centerPos;
     public float wallSpace;
 
+    public float height;
+
     GameObject lastWall;
 
     // Use this for initialization
@@ -16,12 +18,12 @@ public class WallManager : MonoBehaviour {
             GameObject wall = PoolManager.instance.FindPool("WallPool").ActivateGameObject();
             if (wall == null) break;
 
-            float height = wall.GetComponent<SpriteRenderer>().sprite.rect.height/100.0f;
+            //float height = wall.GetComponent<SpriteRenderer>().sprite.rect.height/100.0f;
 
-            wall.transform.localPosition = new Vector3(centerPos + wallSpace, initalYPos + height * i, 0.0f);
+            wall.transform.localPosition = new Vector3(centerPos, initalYPos + height * i, 0.0f);
 
-            wall = PoolManager.instance.FindPool("WallPool").ActivateGameObject();
-            wall.transform.localPosition = new Vector3(centerPos - wallSpace, initalYPos + height * i, 0.0f);
+            //wall = PoolManager.instance.FindPool("WallPool").ActivateGameObject();
+            //wall.transform.localPosition = new Vector3(centerPos - wallSpace, initalYPos + height * i, 0.0f);
 
             lastWall = wall;
         }
@@ -33,12 +35,12 @@ public class WallManager : MonoBehaviour {
 
         if (wall = PoolManager.instance.FindPool("WallPool").ActivateGameObject())
         {
-            float height = wall.GetComponent<SpriteRenderer>().sprite.rect.height / 100.0f;
+            //float height = wall.GetComponent<SpriteRenderer>().sprite.rect.height / 100.0f;
 
-            if (lastWall.transform.position.x > centerPos)
-                wall.transform.localPosition = new Vector3(centerPos - wallSpace, lastWall.transform.position.y, 0.0f);
-            else
-                wall.transform.localPosition = new Vector3(centerPos + wallSpace, lastWall.transform.position.y + height, 0.0f);
+            //if (lastWall.transform.position.x > centerPos)
+                wall.transform.localPosition = new Vector3(centerPos, lastWall.transform.position.y+height, 0.0f);
+            //else
+                //wall.transform.localPosition = new Vector3(centerPos + wallSpace, lastWall.transform.position.y + height, 0.0f);
 
             lastWall = wall;
         }

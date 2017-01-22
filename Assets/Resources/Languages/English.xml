@@ -10,8 +10,14 @@
   
   <Language text="Language:"/>
   <CurrentLanguage text="English"/>
+
+  <Makers text="Makers"/>
   
   <PlayAgain text="Play Again"/>
   <MainMenu text="Main Menu"/>
   <YouDied text="You Died!"/>
+  
+  <Pause text="Pause"/>
+  <Resume text="Resume"/>
+  <Restart text="Restart"/>
 </LanguageData>

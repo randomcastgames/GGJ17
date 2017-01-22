@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class SpriteAnimation : MonoBehaviour {
-    SpriteRenderer mySpriteRenderer;
+    protected SpriteRenderer mySpriteRenderer;
     public Sprite[] spriteList;
 
     public float interval;
 
-    private int index;
+    protected int index;
 
     void OnEnable()
     {
@@ -27,7 +27,7 @@ public class SpriteAnimation : MonoBehaviour {
         StopCoroutine("Animation");
     }
 
-    IEnumerator Animation()
+    public virtual IEnumerator Animation()
     {
         while (true)
         {

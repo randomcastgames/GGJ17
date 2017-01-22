@@ -2,16 +2,22 @@
 
 <LanguageData>
   <Play text="Jogar"/>
-  <Options text="Opções"/>
-  <Credits text="Créditos"/>
+  <Options text="Opcoes"/>
+  <Credits text="Creditos"/>
   <Quit text="Sair"/>
 
   <Return text="Retornar"/>
 
   <Language text="Idioma:"/>
-  <CurrentLanguage text="Português"/>
+  <CurrentLanguage text="Portugues"/>
 
-  <PlayAgain text="Jogar Novamente"/>
-  <MainMenu text="Menu Principal"/>
-  <YouDied text="Você morreu!"/>
+  <Makers text="Criadores"/>
+  
+  <PlayAgain text="Jogar de Novo"/>
+  <MainMenu text="Menu Inicial"/>
+  <YouDied text="Voce morreu!"/>
+
+  <Pause text="Pausa"/>
+  <Resume text="Continuar"/>
+  <Restart text="Reiniciar"/>
 </LanguageData>

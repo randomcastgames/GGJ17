@@ -8,11 +8,13 @@ public class ButtonFunctions : MonoBehaviour {
     public void PlayGame(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
     }
 
     public void LoadLevel(string sceneName)
     {
         SceneManager.LoadScene(sceneName);
+        Time.timeScale = 1;
     }
 
     public void QuitGame()

@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class MoveObject : MonoBehaviour {
 
-    public Vector3 speed;
+    public Vector3 speed = new Vector3(0.0f,-0.02f,0.0f);
     public float timeToDisable = 1;
 
     void Update()
     {
-        transform.position += speed;
+        if (PauseManager.instance.paused) return;
+
+        if (!((gameObject.tag == "Player") && (GameManager.instance.worldSpeed.y == 0.0f)))
+            transform.position += (speed + GameManager.instance.worldSpeed);
+        else if (gameObject.tag == "Player")
+            transform.position += speed;
     }
 
     void OnBecameInvisible()
     {
+        if (PauseManager.instance.paused) return;
+
         StartCoroutine("DisableAfter");
     }
 
