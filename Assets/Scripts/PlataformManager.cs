@@ -6,6 +6,7 @@ public class PlataformManager : MonoBehaviour {
 
     public int numActivePlatforms;
     public float spaceBetweenGroups;
+
     GameObject[] platforms;
     Vector3 top_most;
     ObjectPool pool;
@@ -31,7 +32,7 @@ public class PlataformManager : MonoBehaviour {
         for (int i = 1; i  < numActivePlatforms; ++i)
         {
             platforms[i] = pool.GetRandomActiveObject();
-            platforms[i].transform.position = new Vector3(0, platforms[i - 1].transform.position.y + spaceBetweenGroups);
+            platforms[i].transform.position = new Vector3(0, (i+1) * spaceBetweenGroups);
 
             top_most = platforms[i].transform.position;
             Debug.Log(platforms[i].transform.name);
@@ -47,8 +48,13 @@ public class PlataformManager : MonoBehaviour {
             {
                 Debug.Log(platforms[i].transform.name + " Inactive");
                 platforms[i] = pool.GetRandomActiveObject();
-                if (platforms[i] == null) return;
-                platforms[i].transform.position = new Vector3(0, spaceBetweenGroups);
+                if (platforms[i] == null)
+                {
+                    Debug.Log("None plataforms found");
+                    return;
+                }
+                platforms[i].transform.position = new Vector3(0, top_most.y + spaceBetweenGroups);
+                top_most = platforms[i].transform.position;
             }
         }
 
