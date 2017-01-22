@@ -53,4 +53,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPrefab: {fileID: 0}
   objectCount: 0
-  pool: []
+  pool:
+  - {fileID: 1936513061172684, guid: b5d7bf5c23a050a4f8506e87e8f8c607, type: 2}
+  - {fileID: 1151584731697766, guid: 201fff9a87d52954e9d14fc1256bdafe, type: 2}
+  - {fileID: 1644633880777694, guid: 617bddcab7b3210498267cc9c0fe84dd, type: 2}
+  - {fileID: 1443811227516300, guid: 27bfde7934336314c976898dc10051d6, type: 2}
+  - {fileID: 1761568952699610, guid: d5e4ee4962b863b4f843564d310d299d, type: 2}
+  - {fileID: 1239981165627706, guid: bdb580bda27b40344b191f4231b28cf2, type: 2}
+  - {fileID: 1644633880777694, guid: 617bddcab7b3210498267cc9c0fe84dd, type: 2}
+  - {fileID: 1239981165627706, guid: bdb580bda27b40344b191f4231b28cf2, type: 2}
+  - {fileID: 1443811227516300, guid: 27bfde7934336314c976898dc10051d6, type: 2}
