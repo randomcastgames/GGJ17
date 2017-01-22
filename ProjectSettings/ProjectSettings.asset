@@ -11,7 +11,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: RandomCastGames
-  productName: GGJ17
+  productName: Shock Wave Jump
   defaultCursor: {fileID: 2800000, guid: b588a639c1f3e3449a1378482a174405, type: 3}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13333334, g: 0.17254902, b: 0.21176471, a: 1}
@@ -210,12 +210,13 @@ PlayerSettings:
     height: 180
     banner: {fileID: 0}
   androidGamepadSupportLevel: 0
-  resolutionDialogBanner: {fileID: 0}
+  resolutionDialogBanner: {fileID: 2800000, guid: 58b8501001c517542a6663f119c536ee,
+    type: 3}
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
     - serializedVersion: 2
-      m_Icon: {fileID: 2800000, guid: b588a639c1f3e3449a1378482a174405, type: 3}
+      m_Icon: {fileID: 2800000, guid: a6ae7a68104d77c4684106b47b838bae, type: 3}
       m_Width: 128
       m_Height: 128
   m_BuildTargetBatching: []
