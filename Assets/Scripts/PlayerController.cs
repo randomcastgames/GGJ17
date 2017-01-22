@@ -26,11 +26,15 @@ public class PlayerController : MonoBehaviour {
 
     GameObject rocketLauncher;
 
+    AudioSource audioSource;
+
     // Use this for initialization
     void OnEnable ()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         myRigidyBody = GetComponent<Rigidbody2D>();
+
+        audioSource = GetComponent<AudioSource>();
 
         rocketLauncher = transform.FindChild("Gun").gameObject;
 
@@ -161,6 +165,8 @@ public class PlayerController : MonoBehaviour {
         if(collision.gameObject.tag == "ground")
         {
             grounded = true;
+            audioSource.Stop();
+            audioSource.Play();
         }
 
         if (collision.gameObject.tag == "ammo")
