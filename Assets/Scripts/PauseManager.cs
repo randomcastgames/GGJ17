@@ -8,9 +8,13 @@ public class PauseManager : MonoBehaviour {
     GameObject pauseObj;
     public bool paused = false;
 
+    AudioSource audioSource;
+
 	// Use this for initialization
 	void OnEnable () {
         instance = this;
+
+        audioSource = GetComponent<AudioSource>();
 
         pauseObj = GameObject.FindWithTag("pause");
         pauseObj.SetActive(false);
@@ -26,6 +30,9 @@ public class PauseManager : MonoBehaviour {
 
     public void pauseControl()
     {
+        audioSource.Stop();
+        audioSource.Play();
+
         if (Time.timeScale == 1)
         {
             paused = true;
