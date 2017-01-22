@@ -52,7 +52,7 @@ public class ObjectPool : MonoBehaviour {
 
         int lottery = Random.Range(0, j);
 
-        objectsList[lottery].SetActive(true);
-        return objectsList[lottery];
+        objectsList[index_inactive_list[lottery]].SetActive(true);
+        return objectsList[index_inactive_list[lottery]];
     }
 }
