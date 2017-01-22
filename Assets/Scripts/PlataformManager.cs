@@ -32,9 +32,7 @@ public class PlataformManager : MonoBehaviour {
         for (int i = 1; i  < platforms.Length; ++i)
         {
             platforms[i] = pool.GetRandomActiveObject();
-            platforms[i].transform.position = new Vector3(0, (i+1) * spaceBetweenGroups);
-
-            top_most = platforms[i].transform.position;
+            platforms[i].transform.position = new Vector3(0, platforms[i-1].transform.position.y + spaceBetweenGroups);
             Debug.Log(platforms[i].transform.name);
         }
     }
