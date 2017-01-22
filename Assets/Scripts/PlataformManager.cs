@@ -29,7 +29,7 @@ public class PlataformManager : MonoBehaviour {
         platforms[0] = pool.GetRandomActiveObject();
         platforms[0].transform.position = new Vector3(0, spaceBetweenGroups);
 
-        for (int i = 1; i  < numActivePlatforms; ++i)
+        for (int i = 1; i  < platforms.Length; ++i)
         {
             platforms[i] = pool.GetRandomActiveObject();
             platforms[i].transform.position = new Vector3(0, (i+1) * spaceBetweenGroups);
@@ -42,9 +42,9 @@ public class PlataformManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         int i = 0;
-        for (; i < numActivePlatforms; i++)
+        for (; i < platforms.Length; i++)
         {
-            if(platforms[i].activeSelf == false)
+            if(platforms[i].activeSelf  == false)
             {
                 Debug.Log(platforms[i].transform.name + " Inactive");
                 platforms[i] = pool.GetRandomActiveObject();
@@ -53,10 +53,23 @@ public class PlataformManager : MonoBehaviour {
                     Debug.Log("None plataforms found");
                     return;
                 }
-                platforms[i].transform.position = new Vector3(0, top_most.y + spaceBetweenGroups);
-                top_most = platforms[i].transform.position;
+                platforms[i].transform.position = new Vector3(0,spaceBetweenGroups + seachForTopMostPlatform());
             }
         }
 
 	}
+
+    float seachForTopMostPlatform()
+    {
+        float top_y = -100;
+
+        for (int i = 0; i < platforms.Length; i++)
+        {
+            if(platforms[i].activeSelf && (platforms[i].transform.position.y > top_y)){
+                top_y = platforms[i].transform.position.y;
+            }
+        }
+
+        return top_y;
+    }
 }

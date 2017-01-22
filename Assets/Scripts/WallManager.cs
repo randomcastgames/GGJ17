@@ -38,7 +38,7 @@ public class WallManager : MonoBehaviour {
             //float height = wall.GetComponent<SpriteRenderer>().sprite.rect.height / 100.0f;
 
             //if (lastWall.transform.position.x > centerPos)
-                wall.transform.localPosition = new Vector3(centerPos, lastWall.transform.position.y+height, 0.0f);
+                wall.transform.localPosition = new Vector3(centerPos, lastWall.transform.position.y+height+GameManager.instance.worldSpeed.y, 0.0f);
             //else
                 //wall.transform.localPosition = new Vector3(centerPos + wallSpace, lastWall.transform.position.y + height, 0.0f);
 
